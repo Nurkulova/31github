@@ -1,23 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import styled from "styled-components";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
-      <MainContainer>
-        <Header/>
-        <Footer/>
-      </MainContainer>
+      <div className="app">
+        <Header />
+        <div className="container">
+          <Sidebar />
+        </div>
+        <Home/>
+        <Footer />
+      </div>
     );
   }
-}
 
 export default App;
-
-
-const MainContainer = styled('div')`
-width: 1280px;
-margin: 50px auto;
-`
