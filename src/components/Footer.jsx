@@ -1,17 +1,17 @@
 import React from "react";
-import styles from "../styles/Footer.module.css";
 import Logo from "../assets/images/logo1.svg";
+import styled from "styled-components";
 
 const Footer = () => {
   return (
-    <section className={styles.footer}>
-      <div className={styles.logo}>
-          <img src={Logo} alt="Stuff" />
+    <StyledFooter>
+      <div className='logo'>
+        <img src={Logo} alt="Stuff" />
       </div>
 
-      <div className={styles.rights}>Developed by CHOLPON</div>
+      <div className='rights'>Developed by CHOLPON</div>
 
-      <div className={styles.socials}>
+      <StyledSocials>
         <a href="https://instagram.com" target="_blank" rel="noreferrer">
           <svg className="icon">
             <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#instagram`} />
@@ -29,9 +29,47 @@ const Footer = () => {
             <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#youtube`} />
           </svg>
         </a>
-      </div>
-    </section>
+      </StyledSocials>
+    </StyledFooter>
   );
 };
 
 export default Footer;
+
+const StyledFooter = styled("footer")`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 24px;
+  & .logo {
+    width: 61px;
+  }
+
+  & .logo a {
+    height: 100%;
+  }
+  
+  & .rights {
+    color: var(--dark-sea);
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  & .rights a {
+    color: var(--violet);
+  }
+  
+`;
+const StyledSocials = styled('div')`
+  display: flex;
+  gap: 15px;
+& .socials svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--dark-sea);
+}
+
+& .socials svg:hover {
+  fill: var(--violet);
+}`
