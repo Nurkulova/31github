@@ -4,6 +4,7 @@ import Banner from './Banner'
 import Product from './Product'
 import Products from './Products'
 import Profile from './Profile'
+import Categories from './Categories'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
     <Product/>
     <Products/>
     <Profile/>
+    <Categories/>
     </div>
   )
 }
