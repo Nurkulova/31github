@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/nav/Navbar";
@@ -9,8 +9,7 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Contacts from "./components/contacts/Contacts";
 import Portfolio from "./components/portfolio/Portfolio";
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <div>
         <Header />
@@ -25,6 +24,5 @@ class App extends Component {
       </div>
     );
   }
-}
 
 export default App;
