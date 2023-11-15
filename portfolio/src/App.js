@@ -3,7 +3,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/nav/Navbar";
 import About from "./components/about/About";
-import Experiense from "./components/experiense/Experiense";
+import Experience from "./components/experience/Experience";
 import Services from "./components/services/Services";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contacts from "./components/contacts/Contacts";
@@ -15,7 +15,7 @@ const App = () => {
         <Header />
         <Navbar />
         <About />
-        <Experiense/>
+        <Experience/>
         <Services />
         <Portfolio/>
         <Testimonials/>
