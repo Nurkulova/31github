@@ -26,9 +26,9 @@ const Navbar = () => {
         <FaRegUser />
       </a>
       <a
-        href="#experiense"
-        onClick={() => setActiveNav("#experiense")}
-        className={activeNav === "#experiense" ? "active" : ""}
+        href="#experience"
+        onClick={() => setActiveNav("#experience")}
+        className={activeNav === "#experience" ? "active" : ""}
       >
         <BiBook />
       </a>
