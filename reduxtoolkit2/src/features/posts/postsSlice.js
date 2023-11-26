@@ -66,7 +66,7 @@ const postSlice = createSlice({
       let min = 1;
       const loadedPosts = action.payload.map(post => {
         post.date = sub(new Date(), {minutes: min++}).toISOString
-        return posts;
+        return post;
 
       })
       state.posts = state.posts.concat(loadedPosts)
@@ -81,7 +81,7 @@ const postSlice = createSlice({
 // export const selectAllPosts = (state) => state.posts.posts;
 
 export const selectAllPosts = (state) => state.posts.posts;
-export const getPostsStutus = (state) => state.posts.status;
+export const getPostsStatus = (state) => state.posts.status;
 export const getPostsError = (state) => state.posts.error;
 
 export const { postAdded } = postSlice.actions;
